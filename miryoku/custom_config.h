@@ -2,7 +2,7 @@
 // https://github.com/manna-harbour/miryoku
 
 #if defined (MIRYOKU_KEYBOARD_CORNE)
-
+#error
 #define XXX &none
 
 #define MIRYOKU_LAYOUTMAPPING_BASE( \
