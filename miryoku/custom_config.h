@@ -7,6 +7,22 @@
 //nice_nano_v2
 //corne_left,corne_right
 
+/*
+#########################
+# How to edit this page #
+#########################
+
+Don't touch the first bundle of "K" keys for each layer, this sets the mapping
+
+Move to the next block of "K's" that start with the "XXX" under the layer you want to edit. 
+This is your custom mapping. By replacing any "XXX" or "K##" with an appropriate ZMK keycode, 
+you will overwrite the Miryoku key with your intended key. 
+Note that the block you're editing has no commas.
+
+ZMK keycodes can be found here: https://zmk.dev/docs/codes
+and must start with an action (&kp, or &bt, etc).
+*/
+
 #if defined (MIRYOKU_KEYBOARD_CORNE)
 
 #define XXX &none
@@ -72,7 +88,7 @@ XXX           K20           K21           K22           K23           K24       
      K20, K21, K22, K23, K24,      K25, K26, K27, K28, K29, \
      N30, N31, K32, K33, K34,      K35, K36, K37, N38, N39 \
 ) \
-XXX           K00           K01           K02           K03           K04                 K05           K06           K07           K08           K09           XXX           \
+&molock       K00           K01           K02           K03           K04                 K05           K06           K07           K08           K09           XXX           \
 &kp BSPC      K10           K11           K12           K13           K14                 K15           K16           K17           K18           K19           XXX           \
 XXX           K20           K21           K22           K23           K24                 K25           K26           K27           K28           K29           XXX           \
                                           K32           K33           K34                 K35           K36           K37
@@ -111,3 +127,28 @@ XXX           K20           K21           K22           K23           K24       
                                           K32           K33           K34                 K35           K36           K37
 
 #endif
+
+/*
+Create a new file named "miryoku_zmk/conf/corne.conf" and input the following (without the slashes):
+
+# Copyright 2022 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+# Give your board a cool bluetooth name
+CONFIG_ZMK_KEYBOARD_NAME="Aimee is da shit"
+
+# Uncomment for battery life enhancements
+# CONFIG_ZMK_IDLE_TIMEOUT=30000
+# CONFIG_ZMK_SLEEP=y
+# CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=900000
+
+# Uncomment the following line to enable the Corne OLED Display
+# CONFIG_ZMK_DISPLAY=y
+
+# Modify the display options 
+# CONFIG_ZMK_WIDGET_LAYER_STATUS=y
+# CONFIG_ZMK_WIDGET_BATTERY_STATUS=y
+# CONFIG_ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE=n
+# CONFIG_ZMK_WIDGET_OUTPUT_STATUS=y #show the current output (USB/BLE)
+# CONFIG_ZMK_WIDGET_WPM_STATUS=n
+*/
