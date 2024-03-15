@@ -25,7 +25,6 @@ and must start with an action (&kp, or &bt, etc).
 
 Layer Lock is coming! https://github.com/ecstatic-morse/zmk/blob/molock/docs/docs/behaviors/layers.md#momentary-layer-lock
 */
-*/
 
 #if defined (MIRYOKU_KEYBOARD_CORNE)
 
