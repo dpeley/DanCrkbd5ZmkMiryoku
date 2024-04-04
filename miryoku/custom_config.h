@@ -5,7 +5,7 @@
 
 //Dan's Layers
 //Board=nice_nano_v2
-//shield=corne_left,corne_right
+//shield=corne_left nice_view_adapter nice_view,corne_right nice_view_adapter nice_view
 //Default layout (ColemakDH)
 
 /*
@@ -138,12 +138,18 @@ Create a new file named "miryoku_zmk/conf/corne.conf" and input the following (w
 # https://github.com/manna-harbour/miryoku
 
 # Give your board a cool bluetooth name
-CONFIG_ZMK_KEYBOARD_NAME="Aimee is da shit"
+CONFIG_ZMK_KEYBOARD_NAME="NothingToSeeHere"
 
 # Uncomment for battery life enhancements
-# CONFIG_ZMK_IDLE_TIMEOUT=30000
-# CONFIG_ZMK_SLEEP=y
-# CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=900000
+CONFIG_ZMK_IDLE_TIMEOUT=300000 
+# Milliseconds of inactivity before entering idle (screen off), equals 5 minutes
+CONFIG_ZMK_SLEEP=y 
+# Enable deep sleep support
+CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1800000 
+# Milliseconds of inactivity before entering deep sleep (disconnect everything), equals 30 minutes
+
+CONFIG_BT_CTLR_TX_PWR_PLUS_8=y
+# Default is zero, has negligible impact on battery, and improves communication between splits
 
 # Uncomment the following line to enable the Corne OLED Display
 # CONFIG_ZMK_DISPLAY=y
@@ -151,7 +157,7 @@ CONFIG_ZMK_KEYBOARD_NAME="Aimee is da shit"
 # Modify the display options 
 # CONFIG_ZMK_WIDGET_LAYER_STATUS=y
 # CONFIG_ZMK_WIDGET_BATTERY_STATUS=y
-# CONFIG_ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE=n
-# CONFIG_ZMK_WIDGET_OUTPUT_STATUS=y #show the current output (USB/BLE)
+CONFIG_ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE=y
+# CONFIG_ZMK_WIDGET_OUTPUT_STATUS=y 
+#show the current output (USB/BLE)
 # CONFIG_ZMK_WIDGET_WPM_STATUS=n
-*/
