@@ -145,14 +145,14 @@ CONFIG_ZMK_IDLE_TIMEOUT=300000
 # Milliseconds of inactivity before entering idle (screen off), equals 5 minutes
 CONFIG_ZMK_SLEEP=y 
 # Enable deep sleep support
-CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1800000 
-# Milliseconds of inactivity before entering deep sleep (disconnect everything), equals 30 minutes
+CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=3600000 
+# Milliseconds of inactivity before entering deep sleep (disconnect everything), equals 1 hour
 
 CONFIG_BT_CTLR_TX_PWR_PLUS_8=y
 # Default is zero, has negligible impact on battery, and improves communication between splits
 
-# Uncomment the following line to enable the Corne OLED Display
-# CONFIG_ZMK_DISPLAY=y
+# Uncomment the following line to enable the OLED Display or nice!view Display
+CONFIG_ZMK_DISPLAY=y
 
 # Modify the display options 
 # CONFIG_ZMK_WIDGET_LAYER_STATUS=y
