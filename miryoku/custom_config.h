@@ -5,7 +5,7 @@
 
 //Aimee's Layers
 //Board=nice_nano_v2
-//shield=corne_left,corne_right
+//shield=corne_left nice_view_adapter nice_view,corne_right nice_view_adapter nice_view
 //Qwerty layout
 
 /*
